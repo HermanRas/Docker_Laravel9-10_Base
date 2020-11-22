@@ -20,7 +20,7 @@
                             @endif
                             <p>You have been logged out !</p>
 
-                            <a href="{{ route('home') }}" class="form-control btn btn-primary">Dashboard</a>
+                            <a href="{{ route('home') }}" class="form-control btn btn-primary">Home</a>
                         </div>
                     </div>
                 </form>

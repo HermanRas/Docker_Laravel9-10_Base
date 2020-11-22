@@ -45,6 +45,17 @@
                                     placeholder="A nice strong password" value="{{ old('password') }}">
                             </div>
 
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe" name="remember">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a class="link link-primary" href="{{ route('register') }}">forgot password?</a>
+                                </div>
+                            </div>
                             <button type="submit" class="form-control btn btn-primary">Login</button>
                         </div>
                     </div>

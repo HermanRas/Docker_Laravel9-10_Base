@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header pb-0">
-                        <h5 class="card-title">Home</h5>
+                        <h5 class="card-title">Switches</h5>
                     </div>
                     <div class="card-body" style="min-height: 60vh">
 
@@ -16,7 +16,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <p>Welcome to our website !</p>
+                        <p>Welcome to the switches page !</p>
                     </div>
                 </div>
             </div>

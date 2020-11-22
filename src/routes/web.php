@@ -24,7 +24,16 @@ Route::post('login',[LoginController::class, 'login']);
 Route::get('/register',[RegisterController::class, 'index'])->name('register');
 Route::post('/register',[RegisterController::class, 'store']);
 
+// Switch Pages
+Route::get('/switch',[SwitchController::class, 'index'])->name('switch');
+Route::post('/switch',[SwitchController::class, 'store']);
+
+
+
+
 // Posts Pages
-Route::get('/posts', function () {
-    return view('posts.index');
-})->name('posts');
+// Route::get('/posts', function () {
+//                                     return view('posts.index');
+//                                  })
+//     ->name('posts')
+//     ->middleware('auth');;

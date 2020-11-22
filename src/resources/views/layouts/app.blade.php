@@ -38,7 +38,7 @@
                         </li>
                     @endauth
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Switches</a>
+                        <a class="nav-link" href="{{ route('switches') }}">Switches</a>
                     </li>
                 </ul>
                 <!-- Navbar links end-->
