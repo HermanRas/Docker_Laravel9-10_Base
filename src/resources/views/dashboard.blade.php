@@ -9,9 +9,9 @@
                     @csrf
                     <div class="card">
                         <div class="card-header pb-0">
-                            <h5 class="card-title">Index</h5>
+                            <h5 class="card-title">Dashboard</h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="min-height: 60vh">
                             Hello World
                         </div>
                     </div>
