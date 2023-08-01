@@ -1,13 +1,21 @@
+# Command summary for Docker Lara skeleton
+
 ## Setup base laravel latest:
+``` BASH
 cd ./src
 rm .init
 docker-compose run --rm composer create-project laravel/laravel .
+```
+
 ## Setup base laravel 9
+``` BASH
 docker-compose run --rm composer create-project laravel/laravel:^9.0 .
+```
 
 ## remember to config .env 
 - MY SQL DB
-```.env file
+.env file
+``` TEXT
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
@@ -16,68 +24,91 @@ DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 - User Picture update (public access)
-```.env file
+.env file
+``` TEXT
 CACHE_DRIVER=file
 FILESYSTEM_DISK=pubic
 ```
 
 - User Document upload (private)
-```.env file
+.env file
+``` TEXT
 CACHE_DRIVER=file
 FILESYSTEM_DISK=local
 ```
 
 ## WHEN MOVING OR RESTARTING A PROJECT (if needed don't run all)
+``` BASH
 docker-compose run --rm composer update
 docker-compose run --rm npm install
 docker-compose run --rm npm run dev
 docker-compose run --rm artisan key:generate
 docker-compose run --rm artisan migrate
+```
 
 ## Setup bootstrap for UI
+``` BASH
 docker-compose run --rm npm install
 docker-compose run --rm composer require laravel/ui --dev
 docker-compose run --rm artisan ui bootstrap
 docker-compose run --rm npm install
 docker-compose run --rm npm run dev
+```
 
 ## Building Controller
+``` BASH
 docker-compose run --rm artisan make:controller Auth\\RegisterController
 docker-compose run --rm artisan make:controller DashboardController
 docker-compose run --rm artisan make:controller Auth\\LoginController
+```
 
 ## Building model
+``` BASH
 docker-compose run --rm artisan make:model Listing
+```
 
 ## Building Migrations
+``` BASH
 docker-compose run --rm artisan make:migration create_listings_table
 docker-compose run --rm artisan migrate
 docker-compose run --rm artisan db:seed
 docker-compose run --rm artisan migrate:refresh
 docker-compose run --rm artisan migrate:refresh --seed
+```
 
 ## Building Factories
+``` BASH
 docker-compose run --rm artisan make:factory Listing
+```
 
 ## Switching frameworks from providers like (tailwind) default ui
+``` BASH
 docker-compose run --rm artisan vendor:publish
+```
  - NotificationServiceProvider (flashMessage / SweetAlert / MessagePopper)
  - MailServiceProvider  (phpMailer / AzureSend / AWS-Deliver)
  - PaginationServiceProvider (Bootstrap / Tailwind / Semantic-ui)
 
 ## Storage
+``` BASH
 docker-compose run --rm artisan storage:link
+```
+
  - Remember it will use Default or ENV if configured:
     - (FILESYSTEM_DISK=local)
     - (FILESYSTEM_DISK=public)
 
 ## Access DB
+``` BASH
 docker exec -it mysql mysql -u homestead -psecret homestead
-
+```
 
 ## turn project into PWA
+``` BASH
 docker-compose run --rm composer require ladumor/laravel-pwa
 docker-compose run --rm artisan laravel-pwa:publish
+```
+
 - in the root blade file / index.blade.php / app.blade.php add the PWA header
     ``` HTML
     <!-- PWA  -->
