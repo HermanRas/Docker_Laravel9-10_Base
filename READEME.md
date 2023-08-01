@@ -1,23 +1,25 @@
-# install Settings for DockerHost
-sudo apt -y update
-sudo apt -y upgrade
-sudo apt -y install unzip
-sudo apt -y install php php-fpm php-cli php-zip php-mbstring php-xml
-sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+# Docker Laravel9/10 Build Enviroment for dev
 
-cd ~
-https://github.com/HermanRas/Docker_Laravel8_Base.git
-cd Docker_Laravel8_Base
+![Header Image](https://miro.medium.com/v2/resize:fit:720/format:webp/0*w12TZQ7DBg1BtpHI.jpg)
 
-cd src
-composer update
+this is a project quick start folder to manage dev over multiple devices for multiple developers easy..
+
+user the below steps to get the skeleton on place and the commands.md file to setup your LaraProject
 
 ## first time
+``` BASH
 cd ..
 docker-composer up -d --build
+```
 
 ## to stop
+``` BASH
 docker-composer down
+```
 
 ## to start
+``` BASH
 docker-composer up -d
+```
+
+## Follow Steps in [commands.md](./commands.md)
