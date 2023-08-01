@@ -1,4 +1,6 @@
 ## Setup base laravel latest:
+cd ./src
+rm .init
 docker-compose run --rm composer create-project laravel/laravel .
 ## Setup base laravel 9
 docker-compose run --rm composer create-project laravel/laravel:^9.0 .
