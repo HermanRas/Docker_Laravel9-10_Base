@@ -9,17 +9,17 @@ user the below steps to get the skeleton on place and the commands.md file to se
 ## first time
 ``` BASH
 cd ..
-docker-composer up -d --build
+docker-compose up -d --build
 ```
 
 ## to stop
 ``` BASH
-docker-composer down
+docker-compose down
 ```
 
 ## to start
 ``` BASH
-docker-composer up -d
+docker-compose up -d
 ```
 
 ## Follow Steps in [commands.md](./commands.md)
